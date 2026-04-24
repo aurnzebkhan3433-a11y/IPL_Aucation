@@ -1,0 +1,139 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>
+            Shop Login Page
+        </title>
+
+<style>
+body{
+
+    background-color: rgb(125, 58, 232);
+}
+
+
+.register_shop{
+
+    height:550px;
+    width: 500px;
+    border:3px solid white;
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 50px;
+    background-color: rgb(190, 255, 160);
+    border-radius: 10px;
+    box-shadow: 2px 5px 7px 3px rgb(250, 244, 244) ;
+    
+}
+
+#s{
+    padding:8px;
+    margin-left: 60px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+     border: 1px solid white;
+     width:70px;
+      box-shadow: 2px 5px 7px 3px rgb(180, 244, 255) ;
+}
+
+#c{
+     padding:8px;
+     margin-left: 20px;
+      background-color:green;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    width:70px;
+    box-shadow: 2px 5px 7px 3px rgb(160, 255, 189) ;
+}
+
+#r{
+    margin-left: 50px;
+     text-decoration: underline;
+    color: rgb(23, 23, 23);
+    font-size: 17px;
+
+}
+#p{
+    margin-right: 30px;
+    border-radius: 4px;
+}
+#n{
+    margin-right: 28px;
+    border-radius: 4px;
+}
+#e{
+    margin-right: 5px;
+    border-radius: 4px;
+}
+#name{
+    
+    border-radius: 4px;
+}
+
+
+</style>
+
+
+
+    </head>
+
+<body>
+
+<form class="register_shop" method="POST" action="{% url 'reg_shop_datasave'%}">
+{% csrf_token %}
+
+    <img style="border-radius: 50%;" src="{% static 'ipl_logo.png'%}" height="120px" width="120px" >
+    <h2 style="padding-left: 40px;font-size: 20px;color: rgb(63, 92, 207);font-weight: bold;">IPL Shopping Register</h2>
+    <br>
+    <br>
+
+
+
+    <label style="font-weight: bold;font-size: 17px;">Name :</label>
+    <input id="name" type="text" name="names" value="">
+    <br>
+    <br>
+
+
+          
+    <label style="font-weight: bold;font-size: 17px;">Phone-No :</label>
+    <input id="n" type="number" name="numbers" value="">
+    <br>
+    <br>
+
+    <label style="font-weight: bold;font-size: 17px;">Email :</label>
+    <input id="e" type="email" name="emails" value="">
+    <br>
+    <br>
+     <label style="font-weight: bold;font-size: 17px;">Password :</label>
+    <input id="p" type="password" name="passwords" value="">
+    <br>
+    
+    <br>
+    <br>
+    <input id="s" type="submit" name="submit" value="Save">
+    <input id="c" type="reset" name="reset" value="Cancel">
+    <br>
+     <br>
+     <br>
+    <a id="r" href="{% url 'login_shop' %}">Already i have registered</a>
+
+
+
+
+
+
+</form>
+
+
+
+
+</body>
+
+
+
+
+</html>

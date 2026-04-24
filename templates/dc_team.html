@@ -1,0 +1,236 @@
+{%load static %}
+
+<html>
+    <head>
+<title>CSK-Team List</title>
+
+<style>
+    .ipl_design{
+        height: 170px;
+        width:100%;
+        background-color: rgb(185, 24, 24);
+        display: flex;
+        
+
+       }
+       .logo img{
+        height: 120px;
+        width:160px;
+        border-radius:50%;
+        background-color: aliceblue;
+        margin-top: 7%;
+       }
+       .title h1{
+        display:flex;
+        text-align: center;
+        padding-left: 30%;
+        font-size:25px;
+        padding-top: 3%;
+        color:black;
+       }
+
+        .dclist{
+       height: 50px;
+       width: 100%;
+       background-color: blue;
+       color: white;
+       text-align: center;
+       padding-top: 2%;
+       font-size: 20px;
+
+        }
+
+
+
+
+        .dcall{
+       height: 50px;
+       width: 100%;
+       background-color: blue;
+       color: white;
+       text-align: center;
+       padding-top: 2%;
+       font-size: 20px;
+
+        }
+
+        .dcbowl{
+       height: 50px;
+       width: 100%;
+       background-color: blue;
+       color: white;
+       text-align: center;
+       padding-top: 2%;
+       font-size: 20px;
+
+        }
+
+
+
+ @media screen and (max-width:600px){
+
+     .dclist1{
+     
+     display:flex;
+     flex-wrap: wrap;
+     text-align: center;
+     margin-top: 1%;
+
+}
+
+.dclist{
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+.dcbowl1{
+     
+     display:flex;
+     flex-wrap: wrap;
+     text-align: center;
+     margin-top: 1%;
+
+}
+
+.dcbowl{
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+.dcall{
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+
+ }
+</style>
+
+
+
+
+</head>
+<body>
+<div class="ipl_design">
+
+  <div class="logo" style="height:150px;width:160px;background-color: rgb(185, 24, 24);">
+    <img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'dc_logo.jpg'%}" >
+      </div>
+      <div class="title" style="height:150px;width:100%"><h1 style="color:white;">(IPL) 2026 DC PLAYER LIST IN RETENTIONS</h1></div>
+
+</div>
+
+
+    
+
+
+<div class="dclist">BATSMAN</div>
+
+<div class="dclist1" style="display: flex;justify-content: center;justify-content: space-between;text-align: center;background-color: rgb(185, 24, 24);margin-top: 0.5%;">
+
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_rahul.jpg'%}">
+<p>KL Rahul (W.K)</p>
+</div>
+
+
+  <div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_stubbs.jpg'%}">
+<p>Tristan Stubbs</p>
+</div>
+
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_ashutosh.jpg'%}">
+<p>Ashutosh Sharma</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_rizvi.jpg'%}">
+<p>Sameer Rizvi</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_porel.jpg'%}">
+<p>Abhishek Porel</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_karun.jpg'%}">
+<p>Karun Nair</p>
+</div>
+
+
+</div>
+
+
+
+<div class="dcall">All-Rounders</div>
+
+<div  class="dcall1" style="display: flex;justify-content:center; gap:30px;     text-align: center;background-color: rgb(185, 24, 24);margin-top: 0.5%;">
+
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_patel.jpg'%}">
+<p>Axar Patel (C)</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_nigam.jpg'%}">
+<p>Vipraj Nigam</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_mandal.jpg'%}">
+<p>Ajay mandal</p>
+</div>
+
+
+
+
+
+</div>
+
+
+<div class="dcbowl">Bowlers</div>
+
+<div  class="dcbowl1" style="display: flex;justify-content: center;justify-content: space-between;     text-align: center;background-color: rgb(185, 24, 24);margin-top: 1%;">
+
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_starc.jpg'%}">
+<p>Mitchell Starc</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_kuldeep.jpg'%}">
+<p>Kuldeep Yadav</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_natrajan.jpg'%}">
+<p>T Natrajan</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_mukesh.jpg'%}">
+<p>Mukesh Kumar</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'dc_chameera.jpg'%}">
+<p>Dushmant Chameera</p>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

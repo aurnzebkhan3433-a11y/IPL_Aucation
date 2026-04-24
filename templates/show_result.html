@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Show Result </title>
+
+<style>
+    .data_vote{
+        border-collapse: collapse;
+    }
+</style>
+
+
+
+    </head>
+
+<body>
+
+
+<table border="1" class="data_vote">
+
+    <tr>
+
+<th>player-name</th>
+<th>Team-Name</th>
+    </tr>
+
+{% for x in mydata %}
+
+
+    <tr>
+        
+        <td>{{x.player_name}}</td>
+        <td>{{x.team_name}}</td>
+
+    </tr>
+
+{% endfor %}
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+{%load static %}
+<html>
+    <head>
+        <title>
+            Auction login page
+        </title>
+
+
+     <style>
+
+    .ipl_nav{
+        height: 50px;
+        width:100%;
+        border:1px solid black;
+        background-color: rgb(142, 142, 251);
+    }
+     .ipl_nav2{
+        height: 50px;
+        width:100%;
+        border:1px solid black;
+        background-color: rgb(255, 255, 255);
+        
+    }
+
+    .voting_players{
+        height:350px;
+        width: 100%;
+        border:1px solid black;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        padding-top: 0.5%;
+        text-align: center;
+        background-color: rgb(82, 41, 244);
+    }
+
+
+
+
+
+
+
+     </style>
+
+
+
+    </head>
+
+<body>
+
+<div class="ipl_nav">
+
+<div style="text-align: center;padding-top: 15px;color:white">IPL INDIAN PREMIERE LEAGUE 2026 </div>
+
+
+
+</div>
+  {% if messages %}
+       {% for msg in messages %}
+        <p style="color: rgb(244, 247, 244);text-align: center;font-size: 17px;background-color: green;height: 30px;padding-top: 10px;width: 20%;margin:20px auto;border-radius: 20px;">{{msg}}</p>
+        {% endfor %}
+        {% endif %}
+
+<div class="ipl_nav2">
+
+<div style="text-align: center;padding-top: 15px;color:rgb(59, 59, 59);font-size: 20px;font-family: 'Courier New', Courier, monospace;font-weight: bold;background-color: rgb(61, 215, 61);height: 40px;">Vote players you want in your teams <a style="background-color: white;color:blue;" href="{% url 'vote_count'%}">Show Result</a> </div>
+
+</div>
+
+<form method="POST" action="{% url  'Anal_data'%}">
+    {% csrf_token %}
+    
+    
+    <div class="voting_players">
+
+        <div style="height: 300px;width:220px;border:4px dashed rgb(115, 224, 101);padding-top: 5px;background-color: rgb(236, 239, 247);">
+     <img style="height:200px;width:200px;" src="{% static 'rel_russel.jpg'%}">
+    
+
+        <div>Andre Rusell
+        <div style="padding-top: 10px;">
+           <input type="hidden" name="player_name" value="Andre Russel">
+            <select name="team_name">
+
+                <option value=""><---Vote--Select--Teams--></option>
+                <option value="RCB">RCB</option>
+                <option value="CSK">CSK</option>
+                <option value="KXIP">KXIP</option>
+                <option value="KKR">KKR</option>
+                <option value="MI">MI</option>
+                <option value="RR">RR</option>
+                <option value="DD">DD</option>
+                <option value="GT">GT</option>
+                <option value="LSG">LSG</option>
+                <option value="SRH">SRH</option>
+
+
+
+            </select>
+            <div>
+            <input style="margin-top: 10px;height:20px;width: 70px;" type="submit" value="Vote"></input>
+
+           
+
+        </div>
+
+           </div>
+           </div>
+       </div>
+       
+
+
+    </form>
+
+
+
+    <form method="POST" action="{% url  'Anal_data'%}">
+    {% csrf_token %}
+    
+       
+                <div style="height: 300px;width:220px;border:4px dashed rgb(115, 224, 101);padding-top: 5px;background-color: rgb(236, 239, 247);">
+     <img style="height:200px;width:200px;" src="{% static 'rel_ravi.jpg'%}">
+    
+
+        <div>Ravi Bishnoi
+        <div style="padding-top: 10px;">
+             <input type="hidden" name="player_name"  value="Ravi Bishnoi">
+            <select name="team_name">
+
+                <option value=""><---Vote--Select--Teams--></option>
+                <option value="RCB">RCB</option>
+                <option value="CSK">CSK</option>
+                <option value="KXIP">KXIP</option>
+                <option value="KKR">KKR</option>
+                <option value="MI">MI</option>
+                <option value="RR">RR</option>
+                <option value="DD">DD</option>
+                <option value="GT">GT</option>
+                <option value="LSG">LSG</option>
+                <option value="SRH">SRH</option>
+
+
+
+            </select>
+
+            <div>
+
+          <input style="margin-top: 10px;height:20px;width: 70px;" type="submit" value="Vote"></input>
+          
+            
+            </div>
+        </div>
+
+           </div>
+           </div>
+       
+</form>
+
+
+      <form method="POST" action="{% url  'Anal_data'%}">
+    {% csrf_token %}
+    
+
+          <div style="height: 300px;width:220px;border:4px dashed rgb(115, 224, 101);padding-top: 5px;background-color: rgb(236, 239, 247);">
+     <img style="height:200px;width:200px;" src="{% static 'rel_livingstone.jpg'%}">
+    
+
+        <div> Liam Livingstone
+        <div style="padding-top: 10px;">
+
+            <input type="hidden" name="player_name" value="Liam Livingstone">
+            <select name="team_name">
+
+                <option value=""><---Vote--Select--Teams--></option>
+                <option value="RCB">RCB</option>
+                <option value="CSK">CSK</option>
+                <option value="KXIP">KXIP</option>
+                <option value="KKR">KKR</option>
+                <option value="MI">MI</option>
+                <option value="RR">RR</option>
+                <option value="DD">DD</option>
+                <option value="GT">GT</option>
+                <option value="LSG">LSG</option>
+                <option value="SRH">SRH</option>
+
+
+
+            </select>
+
+            <div>
+
+          <input style="margin-top: 10px;height:20px;width: 70px;" type="submit" value="Vote"></input>
+          
+           
+            </div>
+        </div>
+
+           </div>
+           </div>
+       
+
+
+
+
+
+
+
+
+        
+    </div>
+
+
+</form>
+
+
+
+</body>
+
+
+
+</html>

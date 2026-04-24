@@ -1,0 +1,239 @@
+{%load static %}
+
+<html>
+    <head>
+<title>CSK-Team List</title>
+
+<style>
+    .ipl_design{
+        height: 170px;
+        width:100%;
+        background-color: yellow;
+        display: flex;
+        
+
+       }
+       .logo img{
+        height: 120px;
+        width:160px;
+        border-radius:50%;
+        background-color: aliceblue;
+        margin-top: 7%;
+       }
+       .title h1{
+        display:flex;
+        text-align: center;
+        padding-left: 30%;
+        font-size:25px;
+        padding-top: 3%;
+        color:black;
+       }
+
+        .csklist{
+       height: 50px;
+       width: 100%;
+       background-color: blue;
+       color: white;
+       text-align: center;
+       padding-top: 2%;
+       font-size: 20px;
+
+        }
+
+
+
+
+        .cskall{
+       height: 50px;
+       width: 100%;
+       background-color: blue;
+       color: white;
+       text-align: center;
+       padding-top: 2%;
+       font-size: 20px;
+
+        }
+
+        .cskbowl{
+       height: 50px;
+       width: 100%;
+       background-color: blue;
+       color: white;
+       text-align: center;
+       padding-top: 2%;
+       font-size: 20px;
+
+        }
+
+
+
+ @media screen and (max-width:600px){
+
+     .csklist1{
+     
+     display:flex;
+     flex-wrap: wrap;
+     text-align: center;
+     margin-top: 1%;
+
+}
+
+.csklist{
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+.cskbowl1{
+     
+     display:flex;
+     flex-wrap: wrap;
+     text-align: center;
+     margin-top: 1%;
+
+}
+
+.cskbowl{
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+.cskall{
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+
+ }
+</style>
+
+
+
+
+</head>
+<body>
+<div class="ipl_design">
+
+  <div class="logo" style="height:150px;width:160px;background-color: yellow">
+    <img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'csk_logo.jpg'%}" >
+      </div>
+      <div class="title" style="height:150px;width:100%"><h1>(IPL) 2026 CSK PLAYER LIST IN RETENTIONS</h1></div>
+
+</div>
+
+
+    
+
+
+<div class="csklist">BATSMAN</div>
+
+<div class="csklist1" style="display: flex;justify-content: center;justify-content: space-between;text-align: center;background-color: yellow;margin-top: 1%;">
+
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_gaikwad.jpg'%}">
+<p>Rituraj Gaikwad (C)</p>
+</div>
+
+
+  <div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_samson.jpg'%}">
+<p>Sanju Samson</p>
+</div>
+
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_brevis.jpg'%}">
+<p>Dewald Brevis</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_dhoni.jpg'%}">
+<p>MS Dhoni (w.k)</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_mahtre.jpg'%}">
+<p>Ayush Mahtre</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_patel.jpg'%}">
+<p>Urvil Patel</p>
+</div>
+
+
+</div>
+
+
+
+<div class="cskall">All-Rounders</div>
+
+<div  class="cskall1" style="display: flex;justify-content:center; gap:30px;     text-align: center;background-color: yellow;margin-top: 1%;">
+
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_dube.jpg'%}">
+<p>Shivam Dube</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_overton.jpg'%}">
+<p>Craig Overton</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_kamboj.jpg'%}">
+<p>Anshul Kamboj</p>
+</div>
+
+
+
+
+
+</div>
+
+
+<div class="cskbowl">Bowlers</div>
+
+<div  class="cskbowl1" style="display: flex;justify-content: center;justify-content: space-between;     text-align: center;background-color: yellow;margin-top: 1%;">
+
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_noor.jpg'%}">
+<p>Noor Ahmed</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_ahmed.jpg'%}">
+<p>Khalil Ahmed</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_elis.jpg'%}">
+<p>Nathan Elis</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_chaudhary.jpg'%}">
+<p>Mukesh Chaudhary</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_gopal.jpg'%}">
+<p>Shreyas Gopal</p>
+</div>
+
+<div>
+<img style="height:140px;width:140px;border-radius: 25px;" src="{% static 'csk_singh.jpg'%}">
+<p>Simranjeet Singh</p>
+</div>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

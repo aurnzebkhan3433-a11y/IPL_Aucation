@@ -1,0 +1,349 @@
+{%load static %}
+<html>
+    <head>
+        <title>IPL.com</title>
+
+        <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+       .ipl_design{
+        height: 50px;
+        width:100%;
+        background-color:blue;
+        display: flex;
+        
+
+       }
+       .logo img{
+        height: 40px;
+        width:40px;
+        border-radius:50%;
+        background-color:white;
+        
+       }
+       .title h1{
+        display:flex;
+        text-align: center;
+        padding-left: 5%;
+        font-size:17px;
+        padding-top: 12px;
+        color:white;
+        font-weight: bold;
+       }
+       
+       .header{
+
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        display:flex;
+        justify-content: space-between;
+       font-weight: bold;
+       }
+.header a{
+
+    list-style-type: none;
+    text-decoration: none;
+    font-size:17px;
+    color: black;
+    padding-left: 50px;
+}
+
+.home:hover{
+    
+    background-color:orange;
+    width:200px;
+    padding-left: 50px;
+    transition: 0.3s;
+}
+
+.about:hover{
+    background-color: orange;
+    
+    width:200px;
+    padding-left: 50px;
+     transition: 0.3s;
+}
+
+.shopping:hover{
+    background-color: orange;
+    
+    width:200px;
+    padding-left: 50px;
+     transition: 0.3s;
+}
+
+.gallery:hover{
+    background-color: orange;
+    
+    width:200px;
+    padding-left: 50px;
+     transition: 0.3s;
+}
+
+.home,about,shopping,gallery,a:hover{
+    color: white;
+    width:200px;
+    
+}
+
+
+
+
+.slider{
+
+height:300px;
+width:100%;
+border:1px solid rgb(175, 20, 20);
+text-align: center;
+color:white;
+
+}
+.auction{
+
+    background-image: url("{% static 'auction_bg.jpg'%}");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+.register_auction{
+
+height:300px;
+width: 100%;
+border:2px solid black;
+margin-top: 1%;
+display: flex;
+background-color: red;
+justify-content: center;
+}
+
+.all_teams{
+
+width: 100%;
+height: 200px;
+border:1px solid black;
+background-color: rgb(183, 10, 56);
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+
+}
+
+@media screen and (max-width:600px){
+
+.all_teams{
+
+display:flex;
+flex-wrap: wrap;
+height:650px;
+
+}
+.title h1{
+    font-size: 12px;
+    margin-top: 5px;
+    
+}
+
+  
+
+
+
+
+}
+
+
+        </style>
+    </head>
+    <body>
+
+<div class="ipl_design">
+
+  <div class="logo" style="height:50px;width:50px;background-color:blue;padding-left: 38%;">
+    <img src="{% static 'ipl_logo.png'%}">
+      </div>
+      <div class="title" style="height:150px;width:100%"><h1>(IPL) INDIAN PREMIER LEAGUE 2026</h1></div>
+
+</div>
+
+
+<div class="header">
+
+<div class="home" style="padding-top: 15px;"><a title="Go to home Page" href="#home">Home</a></div>
+<div class="about" style="padding-top: 15px;"><a  title="Go to about Page" href="#about">About</a></div>
+<div class="shopping" style="padding-top: 15px;"><a  title="Go to Shop Page" href="{% url 'login_shop' %}">Shopping</a></div>
+<div class="gallery" style="padding-top: 15px;"><a style="padding-right: 30px;"  title="Go to gallery Page" href="#Gallery">Gallery</a></div>
+
+
+</div>
+
+
+
+<div class="all_teams">
+
+
+
+    <div style="padding-top:2%;">
+<a href="#"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'mi_logo.jpg'%}" ></a>
+</div>
+
+<div style="padding-top:2%;">
+<a href="#"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'rcb_logo.jpg'%}" ></a>
+</div>
+
+<div style="padding-top:2%;">
+<a href="csk_teams/"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'csk_logo.jpg'%}" ></a>
+</div>
+
+<div style="padding-top:2%;">
+<a href="dc_teams/"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'dc_logo.jpg'%}" ></a>
+</div>
+
+<div style="padding-top:2%;">
+<a href="#"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'srh_logo.jpg'%}" ></a>
+</div>
+
+ <div style="padding-top:2%;">
+<a href="#"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'kkr_logo.jpg'%}" ></a>
+</div>
+
+<div style="padding-top:2%;">
+<a href="#"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'gt_logo.jpg'%}" ></a>
+</div>
+
+<div style="padding-top:2%;">
+<a href="#"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'kxip_logo.jpg'%}" ></a>
+</div>
+
+<div style="padding-top:2%;">
+<a href="#"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'lsg_logo.jpg'%}" ></a>
+</div>
+
+<div style="padding-top:2%;">
+<a href="#"><img style="height:140px;width:140px;border-radius: 50%;" src="{% static 'raj_logo.jpg'%}" ></a>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<marquee style="color:white;background-color:rgb(9, 153, 175);height:50px;padding-top:20px;font-weight: bold;font-size: 20px;">INDIAN PREMIER LEAGUE 2026 BIG UPDATES SHOCKING NEWS RELEASED BIG PLAYER NAMES</marquee>
+
+<marquee class="auction">
+
+    <div class="slider" style="display: flex;">
+
+        <div style="height: 300px;width:200px;border: 2px solid white;">
+
+     <div>
+     <img style="height:200px;width:200px;" src="{% static 'rel_russel.jpg'%}">
+        </div>
+
+        <div style="display:block">
+            <h1 style="height:200px;width:180px;font-size:15px;"><mark style="font-size: 17px;">KKR Released By<br>Andre Russell in 12cr</mark></h1>
+        </div>
+
+        </div>
+         
+
+
+        <div style="margin-left: 100px;height: 300px;width:200px;border: 2px solid white;">
+
+             <div style="display:flex">
+     <img style="height:200px;width:200px" src="{% static 'rel_ravi.jpg'%}">
+        </div>
+      
+        <div>
+        <h1 style="height:200px;width:180px;font-size:15px;"><mark style="font-size: 17px;">LSG Released By <br>Ravi Vishnoi in 11cr</mark></h1>
+
+        </div>
+
+       </div>
+
+        <div style="margin-left: 100px;height: 300px;width:200px;border: 2px solid white;">
+
+             <div style="display:flex">
+     <img style="height:200px;width:200px" src="{% static 'rel_livingstone.jpg'%}">
+        </div>
+
+      
+        <div>
+        <h1 style="height:200px;width:180px;font-size:15px;"><mark style="font-size: 17px;">RCB Released by <br>Liam livingstone<br>in 8.75cr</mark></h1>
+
+        </div>
+    </div>
+
+     <div style="margin-left: 100px;height: 300px;width:200px;border: 2px solid white;">
+
+             <div style="display:flex">
+     <img style="height:200px;width:200px" src="{% static 'rel_mcgurk.jpg'%}">
+        </div>
+      
+        <div>
+        <h1 style="height:200px;width:180px;font-size:15px;"><mark style="font-size: 17px;">DC Released By  <br>jack fraser-mcgurk<br>in 9cr</mark></h1>
+
+        </div>
+    </div>
+
+
+ <div style="margin-left: 100px;height: 300px;width:200px;border: 2px solid white;">
+
+             <div style="display:flex">
+     <img style="height:200px;width:200px" src="{% static 'rel_maxwell.jpg'%}">
+        </div>
+      
+        <div>
+        <h1 style="height:200px;width:180px;font-size:15px;"><mark style="font-size: 17px;">punjab Released  <br>Glenn Maxwell<br> in 4cr</mark></h1>
+
+        </div>
+    </div>
+ </div>
+</div>
+
+</marquee>
+
+<div class="register_auction">
+
+<div style="border:3px dashed white">
+<img style="height: 200px;width: 200px;" src="{% static 'auction_hammer.jpg'%}">
+<h1 style="height:50px;width:200px;font-size:20px;color:white;background-color: red;text-align: center;">Malika Sagar</h1>
+</div>
+
+
+
+<div>
+
+<div style="display:flex;padding-left: 50px;">
+<h1 style="font-size: 20px;font-family: Arial, sans-serif;font-weight:bold;"><mark style="color:blue">INDIAN PREMIER LEAGUE<br> IPL MINI AUCTION 2026<br> IN JIDDAH SAUDI ARABIYA</mark></h1>
+</div>
+<div style="display: flex;padding-left: 50px;">
+    <a href="register_auction/" style="font-size: 20px;text-decoration: none;background-color: blue;color:white;border:5px solid rgba(251, 255, 0, 0.901);border-radius: 20px;">Register Auction</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+    </body>
+</html>

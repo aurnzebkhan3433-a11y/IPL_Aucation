@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>Final results Page</title>
+
+        <style>
+            .data_vote{
+
+                border-collapse: collapse;
+            }
+
+             .data_vote1{
+
+                border-collapse: collapse;
+            }
+
+           
+        </style>
+    </head>
+
+    <body>
+<table border="1" class="data_vote">
+
+    <tr>
+
+<th>player-name</th>
+<th colspan="10">Team-Name</th>
+
+    </tr>
+
+
+
+
+    <tr>
+        
+        <td>Andre Rusell</td>
+        <td>RCB</td>
+        <td>KKR</td>
+        <td>SRH</td>
+        <td>LSG</td>
+        <td>MI</td>
+        <td>DD</td>
+        <td>RR</td>
+        <td>CSK</td>
+        <td>GT</td>
+        <td>KXIP</td>
+        
+    
+    </tr>
+
+    <tr>
+
+        <td>Vote</td>
+
+        {% for x in myvote %}
+       <td>{{x}}</td>
+    {% endfor %}
+
+</tr>
+    
+</table>
+
+<br>
+<br>
+
+
+<table border="1" class="data_vote1">
+
+    <tr>
+
+<th>player-name</th>
+<th colspan="10">Team-Name</th>
+
+    </tr>
+
+
+
+
+    <tr>
+        
+        <td>Ravi Bishnoi</td>
+        <td>RCB</td>
+        <td>KKR</td>
+        <td>SRH</td>
+        <td>LSG</td>
+        <td>MI</td>
+        <td>DD</td>
+        <td>RR</td>
+        <td>CSK</td>
+        <td>GT</td>
+        <td>KXIP</td>
+        
+    
+    </tr>
+
+    <tr>
+
+        <td>Vote</td>
+
+        {% for y in myvote1 %}
+       <td>{{y}}</td>
+    {% endfor %}
+
+</tr>
+    
+</table>
+
+
+<br>
+<br>
+
+
+<table border="1" class="data_vote1">
+
+    <tr>
+
+<th>player-name</th>
+<th colspan="10">Team-Name</th>
+
+    </tr>
+
+
+
+
+    <tr>
+        
+        <td>Liam Livingstone</td>
+        <td>RCB</td>
+        <td>KKR</td>
+        <td>SRH</td>
+        <td>LSG</td>
+        <td>MI</td>
+        <td>DD</td>
+        <td>RR</td>
+        <td>CSK</td>
+        <td>GT</td>
+        <td>KXIP</td>
+        
+    
+    </tr>
+
+    <tr>
+
+        <td>Vote</td>
+
+        {% for z in myvote2 %}
+       <td>{{z}}</td>
+    {% endfor %}
+
+</tr>
+    
+</table>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+    <div><img src="{% url 'vote_graph' %}"  width="300"></div>
+    <div><img src="{% url 'vote_graph1' %}"  width="300"></div>
+    <div><img src="{% url 'vote_graph2' %}"  width="300"></div>
+
+
+
+
+
+
+
+
+    </body>
+</html>

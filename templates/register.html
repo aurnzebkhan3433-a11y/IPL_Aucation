@@ -1,0 +1,196 @@
+{% load  static %}
+
+<html>
+    <head>
+        <title>Register Auctions 2026</title>
+
+<style>
+
+.ipl_design{
+        height: 150px;
+        width:100%;
+        background-color: blue;
+        display: flex;
+        
+
+       }
+
+       .logo img{
+        height: 120px;
+        width:160px;
+        border-radius:50%;
+        background-color: aliceblue;
+        margin-top: 7%;
+       }
+       .title h1{
+        display:flex;
+        text-align: center;
+        padding-left: 30%;
+        font-size:30px;
+        padding-top: 3%;
+        color:white;
+       }
+       
+
+
+
+
+.auction_form{
+height:400px;
+width:100%;
+text-align:center;
+background-color:aquamarine;
+ background-image: url("{% static 'bg_reg.svg'%}");
+    background-size: cover;
+    background-position: center;
+   
+    
+
+}
+.auction_form_data label{
+font-size: 15px;
+color: white;
+font-weight: bold;
+background-color: black;
+}
+
+@media screen and (max-width:600px){
+.auction_form{
+height:400px;
+width:100%;
+text-align:center;
+
+ background-color: wheat;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+}
+
+</style>
+
+    </head>
+    <body>
+
+
+
+
+
+
+
+<div class="ipl_design">
+
+  <div class="logo" style="height:150px;width:160px;background-color: blue">
+    <img src="{% static 'ipl_logo.png'%}">
+      </div>
+      <div class="title" style="height:150px;width:100%"><h1>(IPL) INDIAN PREMIER LEAGUE 2026</h1></div>
+
+</div>
+
+
+
+
+
+
+<form  onsubmit=" return validateForm()"  class="auction_form" name="frm" method="POST" action="{% url  'myregister'%}">
+    {% csrf_token %}
+<h1 style="font-size: 20px;text-align: center;color:white;background-color: green;height:50px;width:100%;padding-top: 1%;"> please fill the register_auction 2026 IPL Prediction And Analysis players</h1>
+<div class="auction_form_data">
+
+<label>Name :</label>
+<input  id="name" style="margin-right: 30px;border-radius: 5px;border:1px solid white" type="text" placeholder="Enter name" name="names" value="" ></input>
+
+<br>
+<br>
+
+<label>Phone-no :</label>
+<input id="phone_no" style="margin-right:  48px;border-radius: 5px;border:1px solid white"  type="text" placeholder="Enter phone-no" name="phones" value="" ></input>
+<br>
+<br>
+
+<label>Email :</label>
+<input id="email" style="margin-right:  27px;border-radius: 5px;border:1px solid white"  type="text" placeholder="Enter email" name="emails" value=""></input>
+<br>
+<br>
+
+<label style="margin-right:  20px;">State :</label>
+<select id="states" style="margin-right:  65px;border-radius: 5px;border:1px solid white" name="states">
+    <option><---Choose--></option>
+    <option style="background-color: red;color:white" value="banglore">BANGLORE</option>
+    <option style="background-color: rgb(248, 74, 103);color:white" value="delhi">DELHI</option>
+    <option style="background-color:yellow;color:black" value="chennai">CHENNAI</option>
+    <option style="background-color: rgb(37, 46, 132);color:white" value="gujarat">GUJARAT</option>
+    <option style="background-color: rgba(241, 166, 45, 0.851);color:black" value="hyderabad">HYDERABAD</option>
+    <option style="background-color: rgb(6, 17, 117);color:white" value="kolkata">KOLKATA</option>
+    <option style="background-color: rgb(123, 242, 255);color:black" value="lucknow">LUCKNOW</option>
+    <option style="background-color: rgb(80, 95, 231);color:white" value="mumbai">MUMBAI</option>
+    <option style="background-color: rgb(245, 35, 35);color:white" value="punjab">PUNJAB</option>
+    <option style="background-color: rgb(254, 128, 212);color:white" value="rajasthan">RAJASTHAN</option>
+</select>
+<br>
+<br>
+
+<label>Password :</label>
+<input id="passwords" style="margin-right:30px;border-radius: 5px;border:1px solid white" type="text" placeholder="Enter Password" name="passwords" value="" ></input>
+<br>
+<br>
+<input  style="background-color: green;color: white;border-radius: 15px;padding: 6px;border: 2px solid white;"  type="submit" name="submits" value="Submit"></input>
+         <input style="margin-left: 20px;background-color: rgb(234, 62, 0);color: white;border-radius: 15px;border:1px solid white;padding: 8px;"type="Reset" name="resets" value="Reset"></input>
+
+<div style="margin-top: 1%;padding: 10px;">
+            <a  style="text-decoration: none;border:2px solid blue;background-color: blue;color:white;border-radius: 5px;padding:5px" href="../login/">Login</a>
+         </div>
+
+
+
+
+</div>
+</form>
+<script>
+function validateForm() {
+
+    var name = document.getElementById("name").value.trim();
+    var phone = document.getElementById("phone_no").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var state = document.getElementById("states").value;
+    var password = document.getElementById("passwords").value.trim();
+
+    if (name === "" || phone === "" || email === "" || password === "") {
+        alert("All fields are mandatory");
+        return false;
+    }
+
+    var phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+        alert("Enter valid 10 digit phone number");
+        return false;
+    }
+
+    var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailPattern.test(email)) {
+        alert("Enter valid email");
+        return false;
+    }
+
+    if (state === "<---Choose-->") {
+        alert("Please select a state");
+        return false;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return false;
+    }
+
+    return true;
+}
+</script>
+
+
+
+
+
+    </body>
+</html>
